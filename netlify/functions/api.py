@@ -39,6 +39,7 @@ class TTSRequest(BaseModel):
 def read_root():
     return {"status": "Speechas API is running"}
 
+@app.get("/api/voices")
 @app.get("/voices")
 async def get_voices():
     try:
@@ -47,6 +48,7 @@ async def get_voices():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.post("/api/generate")
 @app.post("/generate")
 async def generate_speech(req: TTSRequest):
     try:
