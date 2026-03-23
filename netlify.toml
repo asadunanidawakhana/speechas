@@ -3,11 +3,11 @@
   publish = "frontend/.next"
 
 [functions]
-  directory = "backend"
+  directory = "netlify/functions"
 
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/main/api/:splat"
+  to = "/.netlify/functions/api/api/:splat"
   status = 200
 
 [[plugins]]
