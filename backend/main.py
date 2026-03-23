@@ -51,7 +51,7 @@ async def get_voices():
 async def generate_speech(req: TTSRequest):
     try:
         output_id = str(uuid.uuid4())
-        files_dir = "outputs"
+        files_dir = "/tmp/outputs"
         os.makedirs(files_dir, exist_ok=True)
         raw_audio_path = os.path.join(files_dir, f"{output_id}_raw.mp3")
         final_audio_path = os.path.join(files_dir, f"{output_id}.mp3")

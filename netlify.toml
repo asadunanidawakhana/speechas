@@ -1,10 +1,9 @@
 [build]
-  base = "frontend"
-  command = "npm run build"
-  publish = ".next"
+  command = "cd frontend && npm run build"
+  publish = "frontend/.next"
 
 [functions]
-  directory = "../backend"
+  directory = "backend"
 
 [[redirects]]
   from = "/api/*"
