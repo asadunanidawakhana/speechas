@@ -7,6 +7,7 @@ import asyncio
 import os
 import uuid
 import shutil
+from mangum import Mangum
 
 # Try to import pydub for silence removal
 try:
@@ -90,3 +91,5 @@ async def generate_speech(req: TTSRequest):
         return FileResponse(final_audio_path, media_type="audio/mpeg", filename=f"speechas_{output_id}.mp3")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+handler = Mangum(app)

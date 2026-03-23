@@ -17,7 +17,7 @@ export default function Home() {
   const [fetchError, setFetchError] = useState<string | null>(null);
   const [fetchingVoices, setFetchingVoices] = useState(true);
 
-  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
 
   const generateCaptcha = () => {
     const code = Math.floor(1000 + Math.random() * 9000).toString();
