@@ -3,7 +3,7 @@
   publish = ".next"
 
 [functions]
-  directory = "../backend"
+  directory = "backend"
 
 [[redirects]]
   from = "/api/*"
